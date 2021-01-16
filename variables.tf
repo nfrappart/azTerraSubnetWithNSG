@@ -20,7 +20,7 @@ variable "NsgName" {
   type = string
 }
 
-variable {
+variable "NsgLocation" {
   type = string
   default = "westeurope"
 }
