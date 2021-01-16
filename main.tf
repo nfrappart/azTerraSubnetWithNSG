@@ -26,7 +26,7 @@ resource "azurerm_network_security_group" "TerraNsg" {
     Usage             = var.EnvironmentUsageTag
     Owner             = var.OwnerTag
     ProvisioningDate  = var.ProvisioningDateTag
-    ProvisioningMode    = var.ProvisioningModeTag
+    ProvisioningMode  = var.ProvisioningModeTag
   }
   lifecycle {
     ignore_changes = [

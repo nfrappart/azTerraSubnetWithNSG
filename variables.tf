@@ -38,3 +38,20 @@ variable "ServiceEndpointPolicies" {
   type    = list
   default = ["Microsoft.AzureCosmosDB", "Microsoft.KeyVault", "Microsoft.Sql", "Microsoft.Storage", "Microsoft.ServiceBus", "Microsoft.EventHub"]
 }
+
+# Tags
+variable "EnvironmentTag" {
+  default = "Test"
+}
+variable "EnvironmentUsageTag" {
+  default = "PoC Only"
+}
+variable "OwnerTag" {
+  default = "Nate"
+}
+variable "ProvisioningDateTag" {
+  default = "Now :)"
+}
+variable "ProvisioningModeTag" {
+  default = "Terraform"
+}
