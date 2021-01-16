@@ -6,20 +6,26 @@
 
 variable "SubnetName" {
   type    = string
-  default = "DefaultSubnet"
 }
 
 variable "RgName" {
   type    = string
-  default = "DefaultRG"
 }
 
 variable "VNetName" {
   type = string
 }
 
+variable "NsgName" {
+  type = string
+}
+
+variable {
+  type = string
+  default = "westeurope"
+}
+
 variable "SubnetAddressPrefix" {
-#  type = string
    type = list
 }
 

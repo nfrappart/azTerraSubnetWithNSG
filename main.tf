@@ -18,8 +18,8 @@ resource "azurerm_subnet" "TerraSubnet" {
 
 #Creation of the NSG
 resource "azurerm_network_security_group" "TerraNsg" {
-  name                = var.NSGName
-  location            = var.NSGLocation
+  name                = var.NsgName
+  location            = var.NsgLocation
   resource_group_name = var.RgName
 
   tags = {
