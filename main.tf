@@ -16,7 +16,28 @@ resource "azurerm_subnet" "TerraSubnet" {
   enforce_private_link_endpoint_network_policies = var.PrivateLinkServicePolicies
 }
 
+#Creation of the NSG
+resource "azurerm_network_security_group" "TerraNsg" {
+  name                = var.NSGName
+  location            = var.NSGLocation
+  resource_group_name = var.RgName
+
+  tags = {
+    Environment       = var.EnvironmentTag
+    Usage             = var.EnvironmentUsageTag
+    Owner             = var.OwnerTag
+    ProvisioningDate  = var.ProvisioningDateTag
+    ProvisioningMode    = var.ProvisioningModeTag
+  }
+  lifecycle {
+    ignore_changes = [
+      tags["ProvisioningDate"],
+    ]
+  }
+}
+
+#NSG association with subnet
 resource "azurerm_subnet_network_security_group_association" "Terra_Subnet_NSG_Association" {
     subnet_id                   = azurerm_subnet.TerraSubnet.id
-    network_security_group_id   = var.NSGid
+    network_security_group_id   = azurerm_network_security_group.TerraNsg.id
 }

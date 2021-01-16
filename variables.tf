@@ -23,11 +23,6 @@ variable "SubnetAddressPrefix" {
    type = list
 }
 
-
-variable "NSGid" {
-  type = string
-}
-
 variable "PrivateLinkServicePolicies"{
   type = string
   default = "true"

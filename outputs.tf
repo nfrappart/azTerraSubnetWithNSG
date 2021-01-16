@@ -19,3 +19,7 @@ output "AddressPrefix" {
 output "RgName" {
   value = azurerm_subnet.TerraSubnet.resource_group_name
 }
+
+output "NsgId" {
+  value = azurerm_network_security_group.TerraNsg.id
+}
