@@ -23,7 +23,6 @@ resource "azurerm_network_security_group" "TerraNsg" {
 
   tags = {
     Environment       = var.EnvironmentTag
-    Usage             = var.EnvironmentUsageTag
     Owner             = var.OwnerTag
     ProvisioningDate  = var.ProvisioningDateTag
     ProvisioningMode  = var.ProvisioningModeTag

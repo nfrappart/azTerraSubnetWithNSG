@@ -43,14 +43,11 @@ variable "ServiceEndpointPolicies" {
 variable "EnvironmentTag" {
   default = "Test"
 }
-variable "EnvironmentUsageTag" {
-  default = "PoC Only"
-}
 variable "OwnerTag" {
   default = "Nate"
 }
 variable "ProvisioningDateTag" {
-  default = "Now :)"
+  type = string
 }
 variable "ProvisioningModeTag" {
   default = "Terraform"
