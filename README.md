@@ -9,7 +9,7 @@ Simple module to create a Subnet with an NSG. You'll need to create the rules af
 
 ```hcl
 module "SN-test_Nate-Fr" {
-  source              = "github.com/nfrappart/azTerraSubnetWithNSG?ref=v1.0.0"
+  source              = "github.com/nfrappart/azTerraSubnetWithNSG?ref=v1.0.1"
   SubnetName          = "sn-test_Nate-Fr"
   NsgName             = "nsg-test_Nate-Fr"
   NsgLocation         = module.vn-hub-eu.Location #ref to an existing VNet Location created via named VN-Fr 
