@@ -46,9 +46,6 @@ variable "EnvironmentTag" {
 variable "OwnerTag" {
   default = "Nate"
 }
-variable "ProvisioningDateTag" {
-  type = string
-}
 variable "ProvisioningModeTag" {
   default = "Terraform"
 }

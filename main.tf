@@ -2,6 +2,10 @@
 # This module allows the creation of a Subnet #
 ###############################################
 
+locals {
+  ProvisioningDateTag = timestamp()
+}
+
 #Creation of the subnet
 resource "azurerm_subnet" "TerraSubnet" {
   name                      = var.SubnetName
@@ -24,7 +28,7 @@ resource "azurerm_network_security_group" "TerraNsg" {
   tags = {
     Environment       = var.EnvironmentTag
     Owner             = var.OwnerTag
-    ProvisioningDate  = var.ProvisioningDateTag
+    ProvisioningDate    = local.ProvisioningDateTag
     ProvisioningMode  = var.ProvisioningModeTag
   }
   lifecycle {
