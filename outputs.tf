@@ -23,3 +23,7 @@ output "RgName" {
 output "NsgId" {
   value = azurerm_network_security_group.TerraNsg.id
 }
+
+output "NsgName" {
+  value = azurerm_network_security_group.TerraNsg.name
+}
