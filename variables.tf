@@ -49,3 +49,7 @@ variable "OwnerTag" {
 variable "ProvisioningModeTag" {
   default = "Terraform"
 }
+variable "UsageTag" {
+  type = string
+  default = "PoC usage only"
+}
